@@ -21,7 +21,31 @@
 
 			MultiplyWeights = new int[width, hight];
 
-			InputData = new int[width, hight];
+			InputData = imputData;
+		}
+
+		public void Teach(bool result)
+		{
+			if (result == false)
+			{
+				for (var y = 0; y <= NeuronWeights.GetUpperBound(1); y++)
+				{
+					for (var x = 0; x <= NeuronWeights.GetUpperBound(0); x++)
+					{
+						NeuronWeights[x, y] += InputData[x, y];
+					}
+				}
+			}
+			else
+			{
+				for (var y = 0; y <= NeuronWeights.GetUpperBound(1); y++)
+				{
+					for (var x = 0; x <= NeuronWeights.GetUpperBound(0); x++)
+					{
+						NeuronWeights[x, y] -= InputData[x, y];
+					}
+				}
+			}
 		}
 
 		public void GetWeights()
