@@ -28,21 +28,9 @@ namespace Perceptron
 
 		static void Main(string[] args)
 		{
-			int[,] inputData = new int[3, 5];
-			inputData[0, 0] = 1;
-			inputData[2, 0] = 1;
-
-			inputData[0, 1] = 1;
-			inputData[2, 1] = 1;
-
-			inputData[0, 2] = 1;
-			inputData[1, 2] = 1;
-			inputData[2, 2] = 1;
-
-			inputData[2, 3] = 1;
-
-			inputData[2, 4] = 1;
-
+			var bitmap = new BMP(@"C:\Users\Timur\Desktop\Bitmap.bmp");//путь здесь
+			var inputData = bitmap.GetArray();
+			bitmap.DisplayArray(inputData); //вывод массива(можно убрать)
 			var neuron = new Neuron(inputData);
 			var weights = GetWeights("").ToList();
 			int counter = default;
