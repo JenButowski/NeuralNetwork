@@ -1,27 +1,24 @@
-﻿namespace NeuroDll
+﻿using System;
+
+namespace NeuroDll
 {
 	public class Neuron
 	{
-		const int _maxSumm = 10;
+		const int _maxSum = 10;
 
 		public int[,] NeuronWeights { get; set; }
 
-		public int[,] MultiplyWeights { get; set; }
-
 		public int[,] InputData { get; set; }
 
-		public int WightsSumm { get; set; }
+		public int WeightSum { get; set; }
 
-		public Neuron(int[,] imputData)
+		public Neuron(int[,] neuronWeights)
 		{
-			var width = imputData.GetUpperBound(0) + 1;
-			var hight = imputData.GetUpperBound(1) + 1;
+			var width = neuronWeights.GetUpperBound(0) + 1;
+			var hight = neuronWeights.GetUpperBound(1) + 1;
 
-			NeuronWeights = new int[width, hight];
-
-			MultiplyWeights = new int[width, hight];
-
-			InputData = imputData;
+			NeuronWeights = neuronWeights;
+			InputData = new int[width, hight];
 		}
 
 		public void Teach(bool result)
@@ -48,32 +45,37 @@
 			}
 		}
 
-		public void GetWeights()
+		private int [,] GetWeights()
 		{
+			var result = new int [InputData.GetUpperBound(0), InputData.GetUpperBound(1)];
+
 			for (var y = 0; y <= InputData.GetUpperBound(1); y++)
 			{
 				for (var x = 0; x <= InputData.GetUpperBound(0); x++)
 				{
-					MultiplyWeights[x, y] = InputData[x, y] * NeuronWeights[x, y];
+					result[x, y] = InputData[x, y] * NeuronWeights[x, y];
 				}
 			}
+
+			return result;
 		}
 
 		public bool GetResult()
 		{
-			foreach (var weight in MultiplyWeights)
+			var multipleWeights = GetWeights();
+			var summ = default(int);
+
+			foreach (var weight in multipleWeights)
 			{
-				WightsSumm += weight;
+				summ += weight;
 			}
 
-			if (WightsSumm >= _maxSumm)
-			{
-				return true;
-			}
-			else
+			if (summ < _maxSum)
 			{
 				return false;
 			}
+
+			return true;
 		}
 	}
 }

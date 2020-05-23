@@ -1,41 +1,26 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using NeuroDll;
 
 namespace Perceptron
 {
 	class Program
 	{
+		public List<Neuron> Neurons { get; set; }
+
+		public IEnumerable<Neuron> CreateNeurons(List<int [,]> neuronWeights)
+		{
+			var result = new List<Neuron>();
+			neuronWeights.ForEach(wgh => result.Add(new Neuron(wgh)));
+
+			return result;
+		}
+
 		static void Main(string[] args)
 		{
-			var bitmap = new BMP(@"C:\Users\Timur\Desktop\Bitmap.bmp");//путь здесь
-			var inputData = bitmap.GetArray();
-			bitmap.DisplayArray(inputData); //вывод массива(можно убрать)
-			var neuron = new Neuron(inputData);
-			var weights = neuron.NeuronWeights;
-			FileWorker.TryGetData(@"C:\Users\Jen\Desktop\weights.txt", ref weights);
-			neuron.NeuronWeights = weights;
-
-			while (true)
-			{
-				neuron.GetWeights();
-
-				var result = neuron.GetResult();
-				Console.WriteLine($"Simon says : {result}");
-				Console.WriteLine("Check result");
-
-				if (!bool.Parse(Console.ReadLine()))
-				{
-					Console.WriteLine("Check result one more time");
-
-					var isTrue = bool.Parse(Console.ReadLine());
-					neuron.Teach(isTrue);
-					FileWorker.TrySavetoFile(neuron.NeuronWeights, @"C:\Users\Jen\Desktop\weights.txt");
-				}
-				else
-				{
-					continue;
-				}
-			}
+			
 		}
 	}
 }
