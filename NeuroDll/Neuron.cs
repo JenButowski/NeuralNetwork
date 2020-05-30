@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace NeuroDll
+﻿namespace NeuroDll
 {
 	public class Neuron
 	{
-		const int _maxSum = 10;
+		const int _maxSum = 60;
 
 		public int[,] NeuronWeights { get; set; }
 
@@ -45,9 +43,10 @@ namespace NeuroDll
 			}
 		}
 
-		private int [,] GetWeights()
+		private int[,] GetWeights(int[,] inputData)
 		{
-			var result = new int [InputData.GetUpperBound(0), InputData.GetUpperBound(1)];
+			this.InputData = inputData;
+			var result = new int[InputData.GetUpperBound(0) + 1, InputData.GetUpperBound(1) + 1];
 
 			for (var y = 0; y <= InputData.GetUpperBound(1); y++)
 			{
@@ -60,9 +59,9 @@ namespace NeuroDll
 			return result;
 		}
 
-		public bool GetResult()
+		public bool GetResult(int[,] inputData)
 		{
-			var multipleWeights = GetWeights();
+			var multipleWeights = GetWeights(inputData);
 			var summ = default(int);
 
 			foreach (var weight in multipleWeights)
@@ -74,8 +73,24 @@ namespace NeuroDll
 			{
 				return false;
 			}
+			else
+			{
+				return true;
+			}
 
-			return true;
+		}
+
+		public int GetWeightSum(int[,] inputData)
+		{
+			var result = 0;
+			for (var y = 0; y <= InputData.GetUpperBound(1); y++)
+			{
+				for (var x = 0; x <= InputData.GetUpperBound(0); x++)
+				{
+					result += inputData[x, y] * NeuronWeights[x, y];
+				}
+			}
+			return result;
 		}
 	}
 }

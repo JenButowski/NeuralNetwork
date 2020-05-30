@@ -21,7 +21,8 @@ namespace Perceptron
 			{
 				for (int i = 0; i < image.Width; i++)
 				{
-					if (image.GetPixel(i, j).Name == "ff000000")
+					var pixelcolor = image.GetPixel(i, j).Name;
+					if (pixelcolor == "ff000000" || pixelcolor == "fe000000" || pixelcolor == "fd000000" || pixelcolor == "fc000000" || pixelcolor == "fb000000" || pixelcolor == "fa000000")
 					{
 						array[i, j] = 1;
 					}
@@ -33,13 +34,13 @@ namespace Perceptron
 			}
 			return array;
 		}
-		public void DisplayArray(int[,] array)
+		public static void DisplayArray(int[,] array)
 		{
-			for (int j = 0; j < image.Height; j++)
+			for (int j = 0; j < array.GetUpperBound(1) + 1; j++)
 			{
-				for (int i = 0; i < image.Width; i++)
+				for (int i = 0; i < array.GetUpperBound(0) + 1; i++)
 				{
-					Console.Write(array[i, j]);
+					Console.Write(array[i, j] + " ");
 				}
 				Console.WriteLine();
 			}
