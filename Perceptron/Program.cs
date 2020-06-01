@@ -58,14 +58,28 @@ namespace Perceptron
 										if (neuron.GetResult(bmp) == false)
 										{
 											Console.Write("Enter t/f to teach: ");
-											neuron.Teach(Convert.ToBoolean(Console.ReadLine()));
-											FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\0.txt");
+											if (Console.ReadKey().Key == ConsoleKey.F)
+											{
+												neuron.Teach(false);
+												FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\0.txt");
+											}
+											else if (Console.ReadKey().Key == ConsoleKey.T)
+											{
+												continue;
+											}
 										}
 										else
 										{
 											Console.Write("Enter t/f to teach: ");
-											neuron.Teach(Convert.ToBoolean(Console.ReadLine()));
-											FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\0.txt");
+											if (Console.ReadKey().Key == ConsoleKey.F)
+											{
+												neuron.Teach(true);
+												FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\0.txt");
+											}
+											else if (Console.ReadKey().Key == ConsoleKey.T)
+											{
+												continue;
+											}
 										}
 										Console.WriteLine();
 										Console.Write("Quit: ");
@@ -100,14 +114,28 @@ namespace Perceptron
 										if (neuron.GetResult(bmp) == false)
 										{
 											Console.Write("Enter t/f to teach: ");
-											neuron.Teach(Convert.ToBoolean(Console.ReadLine()));
-											FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\1.txt");
+											if (Console.ReadKey().Key == ConsoleKey.F)
+											{
+												neuron.Teach(false);
+												FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\1.txt");
+											}
+											else if (Console.ReadKey().Key == ConsoleKey.T)
+											{
+												continue;
+											}
 										}
 										else
 										{
 											Console.Write("Enter t/f to teach: ");
-											neuron.Teach(Convert.ToBoolean(Console.ReadLine()));
-											FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\1.txt");
+											if (Console.ReadKey().Key == ConsoleKey.F)
+											{
+												neuron.Teach(true);
+												FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\1.txt");
+											}
+											else if (Console.ReadKey().Key == ConsoleKey.T)
+											{
+												continue;
+											}
 										}
 										Console.WriteLine();
 										Console.Write("Quit: ");
@@ -142,14 +170,28 @@ namespace Perceptron
 										if (neuron.GetResult(bmp) == false)
 										{
 											Console.Write("Enter t/f to teach: ");
-											neuron.Teach(Convert.ToBoolean(Console.ReadLine()));
-											FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\2.txt");
+											if (Console.ReadKey().Key == ConsoleKey.F)
+											{
+												neuron.Teach(false);
+												FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\2.txt");
+											}
+											else if (Console.ReadKey().Key == ConsoleKey.T)
+											{
+												continue;
+											}
 										}
 										else
 										{
 											Console.Write("Enter t/f to teach: ");
-											neuron.Teach(Convert.ToBoolean(Console.ReadLine()));
-											FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\2.txt");
+											if (Console.ReadKey().Key == ConsoleKey.F)
+											{
+												neuron.Teach(true);
+												FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\2.txt");
+											}
+											else if (Console.ReadKey().Key == ConsoleKey.T)
+											{
+												continue;
+											}
 										}
 										Console.WriteLine();
 										Console.Write("Quit: ");
@@ -184,14 +226,28 @@ namespace Perceptron
 										if (neuron.GetResult(bmp) == false)
 										{
 											Console.Write("Enter t/f to teach: ");
-											neuron.Teach(Convert.ToBoolean(Console.ReadLine()));
-											FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\3.txt");
+											if (Console.ReadKey().Key == ConsoleKey.F)
+											{
+												neuron.Teach(false);
+												FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\3.txt");
+											}
+											else if (Console.ReadKey().Key == ConsoleKey.T)
+											{
+												continue;
+											}
 										}
 										else
 										{
 											Console.Write("Enter t/f to teach: ");
-											neuron.Teach(Convert.ToBoolean(Console.ReadLine()));
-											FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\3.txt");
+											if (Console.ReadKey().Key == ConsoleKey.F)
+											{
+												neuron.Teach(true);
+												FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\3.txt");
+											}
+											else if (Console.ReadKey().Key == ConsoleKey.T)
+											{
+												continue;
+											}
 										}
 										Console.WriteLine();
 										Console.Write("Quit: ");
@@ -226,14 +282,28 @@ namespace Perceptron
 										if (neuron.GetResult(bmp) == false)
 										{
 											Console.Write("Enter t/f to teach: ");
-											neuron.Teach(Convert.ToBoolean(Console.ReadLine()));
-											FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\4.txt");
+											if (Console.ReadKey().Key == ConsoleKey.F)
+											{
+												neuron.Teach(false);
+												FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\4.txt");
+											}
+											else if (Console.ReadKey().Key == ConsoleKey.T)
+											{
+												continue;
+											}
 										}
 										else
 										{
 											Console.Write("Enter t/f to teach: ");
-											neuron.Teach(Convert.ToBoolean(Console.ReadLine()));
-											FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\4.txt");
+											if (Console.ReadKey().Key == ConsoleKey.F)
+											{
+												neuron.Teach(true);
+												FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\4.txt");
+											}
+											else if (Console.ReadKey().Key == ConsoleKey.T)
+											{
+												continue;
+											}
 										}
 										Console.WriteLine();
 										Console.Write("Quit: ");
@@ -268,14 +338,28 @@ namespace Perceptron
 										if (neuron.GetResult(bmp) == false)
 										{
 											Console.Write("Enter t/f to teach: ");
-											neuron.Teach(Convert.ToBoolean(Console.ReadLine()));
-											FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\5.txt");
+											if (Console.ReadKey().Key == ConsoleKey.F)
+											{
+												neuron.Teach(false);
+												FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\5.txt");
+											}
+											else if (Console.ReadKey().Key == ConsoleKey.T)
+											{
+												continue;
+											}
 										}
 										else
 										{
 											Console.Write("Enter t/f to teach: ");
-											neuron.Teach(Convert.ToBoolean(Console.ReadLine()));
-											FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\5.txt");
+											if (Console.ReadKey().Key == ConsoleKey.F)
+											{
+												neuron.Teach(true);
+												FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\5.txt");
+											}
+											else if (Console.ReadKey().Key == ConsoleKey.T)
+											{
+												continue;
+											}
 										}
 										Console.WriteLine();
 										Console.Write("Quit: ");
@@ -310,14 +394,28 @@ namespace Perceptron
 										if (neuron.GetResult(bmp) == false)
 										{
 											Console.Write("Enter t/f to teach: ");
-											neuron.Teach(Convert.ToBoolean(Console.ReadLine()));
-											FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\6.txt");
+											if (Console.ReadKey().Key == ConsoleKey.F)
+											{
+												neuron.Teach(false);
+												FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\6.txt");
+											}
+											else if (Console.ReadKey().Key == ConsoleKey.T)
+											{
+												continue;
+											}
 										}
 										else
 										{
 											Console.Write("Enter t/f to teach: ");
-											neuron.Teach(Convert.ToBoolean(Console.ReadLine()));
-											FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\6.txt");
+											if (Console.ReadKey().Key == ConsoleKey.F)
+											{
+												neuron.Teach(true);
+												FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\6.txt");
+											}
+											else if (Console.ReadKey().Key == ConsoleKey.T)
+											{
+												continue;
+											}
 										}
 										Console.WriteLine();
 										Console.Write("Quit: ");
@@ -352,14 +450,28 @@ namespace Perceptron
 										if (neuron.GetResult(bmp) == false)
 										{
 											Console.Write("Enter t/f to teach: ");
-											neuron.Teach(Convert.ToBoolean(Console.ReadLine()));
-											FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\7.txt");
+											if (Console.ReadKey().Key == ConsoleKey.F)
+											{
+												neuron.Teach(false);
+												FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\7.txt");
+											}
+											else if (Console.ReadKey().Key == ConsoleKey.T)
+											{
+												continue;
+											}
 										}
 										else
 										{
 											Console.Write("Enter t/f to teach: ");
-											neuron.Teach(Convert.ToBoolean(Console.ReadLine()));
-											FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\7.txt");
+											if (Console.ReadKey().Key == ConsoleKey.F)
+											{
+												neuron.Teach(true);
+												FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\7.txt");
+											}
+											else if (Console.ReadKey().Key == ConsoleKey.T)
+											{
+												continue;
+											}
 										}
 										Console.WriteLine();
 										Console.Write("Quit: ");
@@ -394,14 +506,28 @@ namespace Perceptron
 										if (neuron.GetResult(bmp) == false)
 										{
 											Console.Write("Enter t/f to teach: ");
-											neuron.Teach(Convert.ToBoolean(Console.ReadLine()));
-											FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\8.txt");
+											if (Console.ReadKey().Key == ConsoleKey.F)
+											{
+												neuron.Teach(false);
+												FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\8.txt");
+											}
+											else if (Console.ReadKey().Key == ConsoleKey.T)
+											{
+												continue;
+											}
 										}
 										else
 										{
 											Console.Write("Enter t/f to teach: ");
-											neuron.Teach(Convert.ToBoolean(Console.ReadLine()));
-											FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\8.txt");
+											if (Console.ReadKey().Key == ConsoleKey.F)
+											{
+												neuron.Teach(true);
+												FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\8.txt");
+											}
+											else if (Console.ReadKey().Key == ConsoleKey.T)
+											{
+												continue;
+											}
 										}
 										Console.WriteLine();
 										Console.Write("Quit: ");
@@ -436,14 +562,28 @@ namespace Perceptron
 										if (neuron.GetResult(bmp) == false)
 										{
 											Console.Write("Enter t/f to teach: ");
-											neuron.Teach(Convert.ToBoolean(Console.ReadLine()));
-											FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\9.txt");
+											if (Console.ReadKey().Key == ConsoleKey.F)
+											{
+												neuron.Teach(false);
+												FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\9.txt");
+											}
+											else if (Console.ReadKey().Key == ConsoleKey.T)
+											{
+												continue;
+											}
 										}
 										else
 										{
 											Console.Write("Enter t/f to teach: ");
-											neuron.Teach(Convert.ToBoolean(Console.ReadLine()));
-											FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\9.txt");
+											if (Console.ReadKey().Key == ConsoleKey.F)
+											{
+												neuron.Teach(true);
+												FileWorker.TrySavetoFile(neuron.NeuronWeights, @"D:\Code\Jen\WEIGHTS\9.txt");
+											}
+											else if (Console.ReadKey().Key == ConsoleKey.T)
+											{
+												continue;
+											}
 										}
 										Console.WriteLine();
 										Console.Write("Quit: ");
